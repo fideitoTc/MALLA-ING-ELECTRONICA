@@ -96,7 +96,90 @@
   <div class="grid" id="mallaContainer"></div>
 
   <script>
-    const malla = /* JSON DEL PENSUM (sin cambios) */;
+    const malla = [
+  [
+    { nombre: "ÁLGEBRA LINEAL", cod: "MT301B", creditos: 3 },
+    { nombre: "ALGORITMOS Y FUNDAMENTOS DE PROGRAMACIÓN", cod: "SS407", creditos: 3 },
+    { nombre: "CÁLCULO DIFERENCIAL", cod: "MT302B", creditos: 4 },
+    { nombre: "CÁTEDRA UPECISTA", cod: "UPC01", creditos: 1 },
+    { nombre: "HUMANIDADES I", cod: "HM301", creditos: 3 },
+    { nombre: "INTRODUCCIÓN A LA ING. ELECTRÓNICA", cod: "EL100", creditos: 3 },
+    { nombre: "TÉCNICAS DE AUTOAPRENDIZAJE", cod: "PG312", creditos: 2 }
+  ],
+  [
+    { nombre: "CÁLCULO INTEGRAL", cod: "MT303B", creditos: 3 },
+    { nombre: "HERRAMIENTAS DE SOFTWARE", cod: "EL436", creditos: 2 },
+    { nombre: "HUMANIDADES II", cod: "HM302", creditos: 3 },
+    { nombre: "GRAMÁTICA - LENGUA EXTRANJERA", cod: "UPC04", creditos: 2 },
+    { nombre: "MECÁNICA", cod: "FS314", creditos: 2 },
+    { nombre: "PROGRAMACIÓN DE COMPUTADORES I", cod: "SS401", creditos: 4 },
+    { nombre: "SEMILLERO DE INVESTIGACIÓN", cod: "EL437", creditos: 2 }
+  ],
+  [
+    { nombre: "CÁLCULO MULTIVARIABLE", cod: "MT304B", creditos: 4 },
+    { nombre: "CIRCUITO EN CORRIENTE DIRECTA", cod: "EL300", creditos: 4 },
+    { nombre: "ELECTROMAGNETISMO", cod: "FS311", creditos: 4 },
+    { nombre: "ESTADÍSTICA DESCRIPTIVA E INFERENCIAL", cod: "MT307B", creditos: 4 },
+    { nombre: "LECTURA - LENGUA EXTRANJERA", cod: "UPC05", creditos: 2 },
+    { nombre: "METODOLOGÍA DE LA INVESTIGACIÓN", cod: "EL438", creditos: 2 }
+  ],
+  [
+    { nombre: "ANÁLISIS NUMÉRICO", cod: "MT309B", creditos: 3 },
+    { nombre: "CORRIENTE ALTERNA", cod: "EL463", creditos: 4 },
+    { nombre: "ECUACIONES DIFERENCIALES", cod: "MT305B", creditos: 3 },
+    { nombre: "FUNDAMENTOS DE ELECTRÓNICA", cod: "EL464", creditos: 4 },
+    { nombre: "ESCRITURA - LENGUA EXTRANJERA", cod: "UPC06", creditos: 2 },
+    { nombre: "ONDAS ELECTROMAGNÉTICAS", cod: "FS315E", creditos: 4 }
+  ],
+  [
+    { nombre: "ACTIVIDAD DEPORTIVA", cod: "UPC08", creditos: 1 },
+    { nombre: "SISTEMAS ELECTRÓNICOS", cod: "EL501", creditos: 4 },
+    { nombre: "DOMINIO DE LA FRECUENCIA", cod: "EL500", creditos: 4 },
+    { nombre: "FÍSICA MODERNA Y ÓPTICA", cod: "FS328", creditos: 2 },
+    { nombre: "FUNCIONES ESPECIALES", cod: "MT306B", creditos: 4 },
+    { nombre: "LÓGICA DIGITAL", cod: "EL502", creditos: 3 },
+    { nombre: "SEMINARIO DE INVESTIGACIÓN", cod: "EL439", creditos: 2 }
+  ],
+  [
+    { nombre: "ACTIVIDAD CULTURAL", cod: "UPC09", creditos: 1 },
+    { nombre: "ANÁLISIS DE SEÑALES", cod: "EL431", creditos: 3 },
+    { nombre: "SISTEMAS DINÁMICOS", cod: "EL600", creditos: 3 },
+    { nombre: "DISEÑO DE MICROELECTRÓNICA", cod: "EL601", creditos: 4 },
+    { nombre: "INGENIERÍA ECONÓMICA", cod: "AI420", creditos: 2 },
+    { nombre: "CONVERSACIÓN - LENGUA EXTRANJERA", cod: "UPC07", creditos: 2 },
+    { nombre: "MÁQUINAS ELÉCTRICAS", cod: "EL440", creditos: 4 },
+    { nombre: "MICROCONTROLADORES", cod: "EL602", creditos: 4 }
+  ],
+  [
+    { nombre: "CONTROL CONTINUO", cod: "EL700", creditos: 4 },
+    { nombre: "ELECTRÓNICA DE POTENCIA", cod: "EL419", creditos: 3 },
+    { nombre: "GERENCIA", cod: "AE118", creditos: 2 },
+    { nombre: "DISEÑO INTEGRAL - LAB", cod: "EL441", creditos: 4 },
+    { nombre: "SISTEMAS EMBEBIDOS", cod: "EL701", creditos: 3 },
+    { nombre: "TRATAMIENTO DE SEÑALES", cod: "EL442", creditos: 4 }
+  ],
+  [
+    { nombre: "CONTROL DISCRETO", cod: "EL803", creditos: 4 },
+    { nombre: "PROYECTOS EN INGENIERÍA", cod: "FC407", creditos: 3 },
+    { nombre: "INSTRUMENTACIÓN ELECTRÓNICA", cod: "EL805", creditos: 2 },
+    { nombre: "REDES DE TELECOMUNICACIONES", cod: "EL804", creditos: 2 },
+    { nombre: "PROFUNDIZACIÓN", cod: "EL444", creditos: 3 },
+    { nombre: "SISTEMAS DE COMUNICACIÓN", cod: "EL802", creditos: 4 }
+  ],
+  [
+    { nombre: "DISEÑO EXPERIMENTAL", cod: "FC403", creditos: 2 },
+    { nombre: "ANTEPROYECTO DE GRADO", cod: "EL902", creditos: 2 },
+    { nombre: "DISEÑO DE REDES", cod: "EL901", creditos: 3 },
+    { nombre: "MEDIOS DE TRANSMISIÓN", cod: "EL445", creditos: 4 },
+    { nombre: "OPTATIVA VIRTUAL", cod: "EL801", creditos: 1 },
+    { nombre: "REDES Y TRANSPORTE", cod: "EL900", creditos: 4 }
+  ],
+  [
+    { nombre: "OPTATIVA I", cod: "EL009", creditos: 2 },
+    { nombre: "OPTATIVA II", cod: "EL010", creditos: 2 },
+    { nombre: "TRABAJO DE GRADO", cod: "EL008", creditos: 2 }
+  ]
+]; // se insertará en el siguiente paso
 
     const container = document.getElementById('mallaContainer');
     const estadoGuardado = JSON.parse(localStorage.getItem('materiasCompletadas') || '{}');
